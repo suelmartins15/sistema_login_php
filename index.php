@@ -1,5 +1,5 @@
 <?php 
- echo "Seja bem vindo";
+    session_start();
 
  ?>
 
