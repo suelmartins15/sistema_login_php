@@ -12,7 +12,11 @@
 </head>
 <body>
     <?php
-        
+        if(!isset($_POST['Enviar'])){
+            include('login.php');
+        }else{
+            include('home.php');
+        }
     ?>
 </body>
 </html>
