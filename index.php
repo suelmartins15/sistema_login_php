@@ -1,6 +1,5 @@
 <?php 
     session_start();
-
  ?>
 
 <!DOCTYPE html>
@@ -12,11 +11,13 @@
 </head>
 <body>
     <?php
-        if(!isset($_POST['Enviar'])){
-            include('login.php');
-        }else{
-            include('home.php');
-        }
+      echo "Página index";
+      if(isset($_POST['acao'])){
+          include 'login.php';
+      }else{
+          include 'home.php';
+      }
+
     ?>
 </body>
 </html>
