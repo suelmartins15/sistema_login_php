@@ -12,7 +12,7 @@
 <body>
     <?php
       echo "Página index";
-      if(isset($_POST['acao'])){
+      if(!isset($_POST['acao'])){
           include 'login.php';
       }else{
           include 'home.php';
