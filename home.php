@@ -1,2 +1,2 @@
 <?php 
-    echo 'Essa pagina home';
+    echo '<h2> '
