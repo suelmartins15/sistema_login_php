@@ -31,7 +31,7 @@
             }
             include_once 'login.php';
         }else{
-            
+
             include 'home.php';
         }
      
