@@ -11,12 +11,13 @@
 </head>
 <body>
     <?php
-      
-      if(!isset($_POST['acao'])){
-          include 'login.php';
-      }else{
-          include 'home.php';
-      }
+        
+        if(!isset($SESSION['logi'])){
+            include_once 'home.php';
+        }else{
+            include 'login.php';
+        }
+     
 
     ?>
 </body>
