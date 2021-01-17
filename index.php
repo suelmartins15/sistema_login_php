@@ -22,16 +22,19 @@
                 $senhaForm = $_POST['senha'];
 
                 if($login = $loginForm && $senha = $senhaForm){
-                    echo 'Seja bem vindo,login realizado comsecesso';
+                    echo 'Seja bem vindo,login realizado com sucesso';
                     header('Location: home.php');
                 }else{
                     echo 'Dados incorretos';
 
                 }
             }
-            include_once 'login.php';
+            include 'login.php';
         }else{
-
+            if(isset($_GET['logout'])){
+                unset($_SESSION['login']);
+                session_destroy();
+            }
             include 'home.php';
         }
      
