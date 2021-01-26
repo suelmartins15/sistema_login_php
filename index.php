@@ -11,9 +11,14 @@
 <body>
     <?php 
         if(!isset($_SESSION['login'])){
-            echo "chama pagina de login";
+            echo 'ola mundo';
+            if(isset($_POST['acao'])){
+                echo 'formulario enviado';
+            }
+
+            include('login.php');
         }else{
-            echo "vai para pagina home";
+            include('home.php');
         }
 
     ?>
