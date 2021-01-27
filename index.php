@@ -10,14 +10,31 @@
 </head>
 <body>
     <?php 
-        if(!isset($_SESSION['login'])){
-            echo 'ola mundo';
+        if(!isset($_SESSION['login'])){            
             if(isset($_POST['acao'])){
-                echo 'formulario enviado';
+                $login = 'suel';
+                $senha = '123';
+
+                $loginForm = $_POST['login'];
+                $senhaForm = $_POST['senha'];
+
+                if($login == $loginForm && $senha == $senhaForm){
+                    //logado  comsecesso
+                    $_SESSION['login'] = $login;
+                    header('Location: index.php');
+                }else{
+                    //deu algo errado
+                    echo 'Dados invalidos';
+                }
             }
 
             include('login.php');
         }else{
+                if(isset($_GET['logout'])){
+                    unset($_SESSION['login']);
+                    session_destroy();
+                    header('Location: index.php');
+                }
             include('home.php');
         }
 
