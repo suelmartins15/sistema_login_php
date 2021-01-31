@@ -1,5 +1,5 @@
-<form action="" method="POST">
-    <input type="text" name="login">
-    <input type="submit" value="senha">
-    <input type="button" name="acao" value="Enviar dados" >
+<form action="" method="post">
+    <input type="text" name="login" placeholder="Digite user">
+    <input type="password" name="senha">
+    <input type="submit" name="acao" value="Enviar">
 </form>
