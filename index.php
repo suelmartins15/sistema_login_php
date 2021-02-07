@@ -26,10 +26,7 @@
                     echo 'Dados invalidos';
                     
                 }
-            }else{
-
             }
-
             include 'login.php';
         }else{
             include 'home.php';
