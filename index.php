@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Sistema de Login</title>
 </head>
-<body>
+<body id="container">
     <?php 
         if(!isset($_SESSION['login'])){
             if(isset($_POST['acao'])){
