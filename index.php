@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Sistema de Login</title>
 </head>
-<body id="container">
+<body>
+    <div class="container">
+
+    
     <?php 
         if(!isset($_SESSION['login'])){
             if(isset($_POST['acao'])){
@@ -37,6 +40,7 @@
             }
             include 'home.php';
         }
-    ?>    
+    ?>   
+    </div> 
 </body>
 </html>
